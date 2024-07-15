@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Learning Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d2b4de; /* White background */
+            display: flex;
+            flex-direction: column; /* Vertical stacking of elements */
+            align-items: center; /* Center items horizontally */
+        }
+        header {
+            background-color: #9b59b6; /* Purple header */
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            width: 100%;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px;
+        }
+        nav {
+            background-color: #9b59b6; /* Purple navbar */
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            min-width: 200px;
+            order: -1; /* Move nav to the left */
+        }
+        a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #8e44ad; /* Darker purple for links */
+            padding: 10px;
+            width: 188px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #663399; /* Darker purple on hover */
+        }
+        div {
+            padding: 20px;
+            background-color: white; /* White sections */
+            color: #555;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #9b59b6; /* Purple heading */
+        }
+        p {
+            color: #555;
+        }
+        .container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: lightpink;
+}
+.yellow {
+    background-color: #d2b4de;
+    width: auto;
+    height: auto;
+    margin:5px  auto;
+}
+.red {
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin:5px auto;
+}
+.brown {
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin: 5px auto;
+}
+.blue { 
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin: 5px auto;
+}
+.green {
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin: 5px auto;
+}
+.black {
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin: 5px auto;
+}
+.orange {
+    background-color:   #d2b4de;
+    width: auto;
+    height: auto;
+    margin: 5px auto;
+}
+
+.button {
+    background-color: #9b59b6; /* Purple background */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+}
+input[type="number"] {
+    background-color:  #9b59b6; /* Light purple background */
+    color: white; /* White text color */
+    padding: 10px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 16px;
+}
+input[type="text"] {
+    background-color:  #9b59b6; /* Light purple background */
+    color: white; /* White text color */
+    padding: 10px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 16px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:  #9b59b6;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learning JavaScript</h1>
+    </header>
+
+    <main>
+        <nav>
+            <a >OBJECTIVE</a>
+            <a href="#vriables"> Addition</a>
+            <a href="#functions">Objects</a>
+            <a href="#conditions">Variables</a>
+            <a href="#loops">For Loop</a>
+            <a href="#events">While Loop</a>
+            <a href="#purple">Do-While loop</a>
+            <a href="#orange">Arrays</a>
+            <a href="#black">If-else</a>
+            <a href="#doo">Switches</a>
+        </nav>
+        <div class="containers">
+            <h2>JavaScript</h2>
+            <p>JavaScript is the Programming Language for the Web.
+
+JavaScript can update and change both HTML and CSS.
+
+JavaScript can calculate, manipulate and validate data.</p>
+        <div class="yellow" id="variables">
+            <h2>Addition</h2>
+            <h3>JavaScript Statements arithmetic operations</h3>
+           
+            <button class="button" onclick="var1()">Example 1 </button>
+            <button class="button" onclick="var2()">Example 1 </button>
+            <button class="button" onclick="var3()">Example 1 </button>
+        
+        
+        
+        <script>
+       function var1() {
+                    document.getElementById('content').innerHTML += `
+          <div class="example-box">
+            <h3>Example 1</h3>
+            
+            <div id="example-output"></div>
+          
+          <pre>
+          <h3>Code</h3>
+          DOCTYPE html<br>
+          html<br>
+          body<br>
+          ?php
+          echo My first PHP script!
+          ?>
+/html<br>
+/body<br>
+<h3>OUTPUT</h3>
+<p>My first PHP script!</p>
+          </pre>
+            
+            <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_intro" >
+           <button class="btn btn-success"> Try it Yourself </button>
+           </a>
+            
+          </div>
+        `;         
+                }
+
+           function var2(){
+            document.getElementById('content').innerHTML += `
+        <div class="example-box">
+          <h3>Example 2</h3>
+          
+          <pre>
+          <h3>CODE</h3>
+          DOCTYPE html<br>
+          body<br>
+          ?php
+ECHO "Hello World!<br>";
+echo "Hello World!<br>";
+EcHo "Hello World!<br>";
+?
+         
+/body<br>
+/html<br>
+          
+<h2>OUTPUT:</h2>
+<p>
+Hello World!<br>
+Hello World!<br>
+Hello World!<br>
+</p>
+
+
+          </pre>
+          <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_syntax_case1" >
+          <button class="btn btn-success"> Try it Yourself </button>
+          </a>
+          
+          
+        </div>
+
+         `;// Load content for Example 2
+      
+     
+  }
+
+  function var3(){
+    document.getElementById('content').innerHTML += `
+
+          <h3>Example 3</h3>
+          
+          <pre>
+          <h3>CODE</h3>
+          DOCTYPE html<br>
+          body<br>
+          ?php
+$x = 5;
+$y = 4;
+echo $x + $y;
+?>      
+/body<br>
+/html<br>
+          
+<h2>OUTPUT:</h2>
+<p>
+9
+</p>
+
+
+          </pre>
+          <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_syntax_case1" >
+          <button class="btn btn-success"> Try it Yourself </button>
+          </a>
+          
+          
+        </div>
+
+         `;
+     
+  }
+
+            function undo(){
+                codeDisplay.textContent = "";
+                document.getElementById("firstname").value="";
+                document.getElementById("lastname").value="";
+            }
+        </script>
+        
+            <a href="http://tpcg.io/_49DW3H" target="_blank">
+                <button class="button">TRY IT YOURSELF</button>
+            </a>
+            <!-- Add more content related to Variables here -->
+        </div>
+<h2>JavaScript Objects</h2>
+<p>An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life.</p>
+        <div class="red" id="functions">
+            <h2>JavaScript Objects</h2>
+            <h3>An object method is a function definition, stored as a property value.</h3>
+            <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" />
+
+    <button class="button" onclick="showFullName()">Show Full Name</button>
+
+    <p id="fullNameResult"></p>
+
+    <button class="button" onclick="showCode1()">SHOW CODE</button>
+    <button class="button" onclick="undo2()">UNDO</button>
+
+    <pre id="codeDisplay1"></pre>
+
+    <script>
+        function showFullName() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var fullName = firstName + " " + lastName;
+            document.getElementById("fullNameResult").textContent = "Full Name: " + fullName;
+        }
+
+        function showCode1() {
+            var codeDisplay1 = document.getElementById("codeDisplay1");
+
+            var jsCode1 = `
+function showFullName() {
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var fullName = firstName + " " + lastName;
+    document.getElementById("fullNameResult").textContent = "Full Name: " + fullName;
+}
+
+function showCode() {
+    var codeDisplay = document.getElementById("codeDisplay");
+    var jsCode = \`
+    // Your JavaScript code here
+\`;
+    codeDisplay.textContent = jsCode;
+}
+`;
+
+            codeDisplay1.textContent = jsCode1;
+        }
+        function undo2(){
+            codeDisplay1.textContent = ""; 
+            document.getElementById("firstName").value="";
+            document.getElementById("lastName").value="";
+        }
+
+    </script>
+
+
+    <a href="http://tpcg.io/_49DW3H" target="_blank">
+        <button class="button">TRY IT YOURSELF</button></a>
+        </div>
+    <h2>Convert case</h2>
+    <p>Inside the convertCase function It gets the input text from the user ,Converts the text to uppercase and lowercase using toUpperCase and toLowerCase functions,Creates a result text including the original, uppercase, and lowercase versions.
+        Displays the result in the designated paragraph.</p>
+        <div class="blue" id="conditions">
+          <h2>Convert Case</h2>
+          <h3>In this text cases are converted into both lower and uper case .</h3>
+          <label for="textInput">Enter Text:</label>
+          <input type="text" id="textInput" />
+      
+          <button class="button" onclick="convertCase()">Convert Case</button>
+      
+          <p id="result"></p>
+      
+          <button class="button" onclick="showCode2()">SHOW CODE</button>
+          <button class="button" onclick="undo1()">UNDO</button>
+      
+          <pre id="codeDisplay2"></pre>
+      
+          <script>
+              function convertCase() {
+                  var inputText = document.getElementById("textInput").value;
+                  var upperCaseText = inputText.toUpperCase();
+                  var lowerCaseText = inputText.toLowerCase();
+      
+                  var resultText = `
+      Original Text: ${inputText}
+      Uppercase: ${upperCaseText}
+      Lowercase: ${lowerCaseText}
+      `;
+      
+                  document.getElementById("result").textContent = resultText;
+              }
+      
+              function showCode2() {
+                  var codeDisplay2 = document.getElementById("codeDisplay2");
+      
+                  var jsCode2 = `
+      function convertCase() {
+          var inputText = document.getElementById("textInput").value;
+          var upperCaseText = inputText.toUpperCase();
+          var lowerCaseText = inputText.toLowerCase();
+      
+          var resultText = "\\nOriginal Text: " + inputText +
+              "\\nUppercase: " + upperCaseText +
+              "\\nLowercase: " + lowerCaseText +
+              "\\n";
+      
+          document.getElementById("result").textContent = resultText;
+      }
+      
+      function showCode() {
+          var codeDisplay = document.getElementById("codeDisplay");
+          var jsCode = \`
+          // Your JavaScript code here
+      \`;
+          codeDisplay.textContent = jsCode;
+      }
+      `;
+      
+                  codeDisplay2.textContent = jsCode2;
+
+              }
+              function undo1(){
+                codeDisplay2.textContent = "";
+                document.getElementById("textInput").value="";
+              }
+          </script>
+  
+      
+      <a href="http://tpcg.io/_49DW3H" target="_blank">
+          <button class="button">TRY IT YOURSELF</button></a>
+            <!-- Add more content related to Conditions here -->
+        </div>
+        <h2>For Loop:</h2>
+        <p>A for loop in programming is a control flow statement that allows code to be repeatedly executed a specific number of times. It's a fundamental construct in many programming languages and is particularly useful when you need to perform a task multiple times with slight variations.</p>
+
+        <div class="green" id="loops">
+          
+          
+            <h2>For Loop</h2>
+            <h3>Number Table Generator Using For Loop</h3>
+
+            Enter a number: <input type="text" id="numberInput">
+        
+            <button class="button" onclick="generateTable()">Generate Table</button>
+            <button class="button" onclick="showCode13()">Show Code</button>
+            <button class="button" onclick="refreshPage()">Refresh</button>
+        
+            <div id="tableOutput" class="black"></div>
+            <pre id="codeDisplay13"></pre>
+        
+            <script>
+                var jsCode = "";
+        
+                function generateTable() {
+                    var numberInput = document.getElementById("numberInput");
+                    var tableOutput = document.getElementById("tableOutput");
+        
+                    var number = parseInt(numberInput.value);
+        
+                    if (isNaN(number)) {
+                        alert("Please enter a valid number.");
+                        return;
+                    }
+        
+                    var table = "<h2>Table for " + number + "</h2><table><tr><th>Multiplier</th><th>Result</th></tr>";
+        
+                    for (var i = 1; i <= 10; i++) {
+                        table += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+                    }
+        
+                    table += "</table>";
+        
+                    tableOutput.innerHTML = table;
+                    jsCode = generateTable.toString();
+                }
+        
+                function showCode13() {
+                    var codeDisplay13 = document.getElementById("codeDisplay13");
+                    codeDisplay13.textContent = jsCode;
+                }
+        
+                function refreshPage() {
+                    // Reset the input and clear the table
+                    document.getElementById("numberInput").value = "";
+                    document.getElementById("tableOutput").innerHTML = "";
+                    var codeDisplay13 = document.getElementById("codeDisplay13");
+                    codeDisplay13.textContent = "";
+                }
+            </script>
+    
+
+<a href="http://tpcg.io/_49DW3H" target="_blank">
+    <button class="button">TRY IT YOURSELF</button></a>
+ </div>
+<h2>While Loop:</h2>
+<p>A while loop is another type of control flow statement in programming that allows a block of code to be executed repeatedly as long as a specified condition is true. The loop will continue executing as long as the condition remains true, and it will exit when the condition becomes false.</p>
+        <div class="brown" id="events">
+          <h2>While Loop</h2>
+          <h3>Number Table Generator Using While Loop</h3>
+      
+          Enter a number: <input type="text" id="numberInput1">
+          <button class="button" onclick="generateTable2()">Generate Table</button>
+          <button class="button" onclick="showCode6()">Show Code</button>
+          <button class="button" onclick="refreshPage2()">Refresh</button>
+      
+          <div id="tableOutput1" class="black"></div>
+          <pre id="codeDisplay6"></pre>
+      
+          <script>
+              var codeDisplay6 = document.getElementById("codeDisplay6");
+              var jsCode6 = "sh"; // Declare a variable to store the code
+      
+              function generateTable2() {
+                  var numberInput = document.getElementById("numberInput1");
+                  var tableOutput = document.getElementById("tableOutput1");
+      
+                  var number = parseInt(numberInput.value);
+      
+                  if (isNaN(number)) {
+                      alert("Please enter a valid number.");
+                      return;
+                  }
+      
+                  var table = "<h2>Table for " + number + "</h2><table><tr><th>Multiplier</th><th>Result</th></tr>";
+      
+                  var i = 1;
+                  while (i <= 10) {
+                      table += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+                      i++;
+                  }
+      
+                  table += "</table>";
+      
+                  tableOutput.innerHTML = table;
+      
+                  // Store the current code in case it needs to be undone
+                  jsCode6 = generateTable2.toString();
+              }
+      
+              function showCode6() {
+                  // Display the stored code
+                  codeDisplay6.textContent = jsCode6;
+              }
+      
+              function refreshPage2() {
+                  // Reset the input, clear the table, and hide the code display
+                  document.getElementById("numberInput1").value = "";
+                  document.getElementById("tableOutput1").innerHTML = "";
+                  codeDisplay6.textContent = "";
+              }
+          </script>
+           <a href="http://tpcg.io/_49DW3H" target="_blank">
+            <button class="button" >TRY IT YOURSELF</button></a>
+        </div>
+        <h2>Do-While Loop:</h2>
+        <p>A do-while loop is a variation of the while loop. The primary difference is that in a do-while loop, the block of code is executed at least once before the loop condition is checked. After the first execution, the loop continues to execute as long as the specified condition is true.</p>
+       <div class="brown" id="purple" >
+        <h2>Do While Loop</h2>
+        <h3>Number Table Generator Using Do While Loop</h3>
+    
+        Enter a number: <input type="text" id="numberInputDoWhile">
+        <button class="button" onclick="generateTableDoWhile()">Generate Table</button>
+        <button class="button" onclick="showCodeDoWhile()">Show Code</button>
+        <button class="button" onclick="refreshPageDoWhile()">Refresh</button>
+    
+        <div id="tableOutputDoWhile" class="black"></div>
+        <pre id="codeDisplayDoWhile"></pre>
+    
+        <script>
+            var codeDisplayDoWhile = document.getElementById("codeDisplayDoWhile");
+            var jsCodeDoWhile = "";
+    
+            function generateTableDoWhile() {
+                var numberInput = document.getElementById("numberInputDoWhile");
+                var tableOutput = document.getElementById("tableOutputDoWhile");
+    
+                var number = parseInt(numberInput.value);
+    
+                if (isNaN(number)) {
+                    alert("Please enter a valid number.");
+                    return;
+                }
+    
+                var table = "<h2>Table for " + number + "</h2><table><tr><th>Multiplier</th><th>Result</th></tr>";
+    
+                var i = 1;
+                do {
+                    table += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+                    i++;
+                } while (i <= 10);
+    
+                table += "</table>";
+    
+                tableOutput.innerHTML = table;
+                jsCodeDoWhile = generateTableDoWhile.toString();
+            }
+    
+            function refreshPageDoWhile() {
+                // Reset the input and clear the table
+                document.getElementById("numberInputDoWhile").value = "";
+                document.getElementById("tableOutputDoWhile").innerHTML = "";
+                codeDisplayDoWhile.textContent = "";
+            }
+    
+            function showCodeDoWhile() {
+                codeDisplayDoWhile.textContent = jsCodeDoWhile;
+            }
+        </script> <a href="http://tpcg.io/_49DW3H" target="_blank">
+      <button class="button" >TRY IT YOURSELF</button></a>
+
+       </div>
+       <h2>Arrays:</h2>
+       <p>An array is a data structure in JavaScript that allows you to store multiple values in a single variable. Each value in an array is called an element, and each element has a unique index that starts from 0. Arrays are versatile and commonly used for organizing and manipulating sets of related data.</p>
+       <div class="brown" id="orange">
+        <h2>Array</h2>
+        <h3>Example</h3>
+        <p>In the provided example, the array myArray contains the numbers [1, 2, 3, 4, 5]. The processArray function then doubles each element in the array using the map function, resulting in the processed array [2, 4, 6, 8, 10]. The processed array is then displayed in the HTML document.
+    
+            Here's a breakdown of the key parts:
+            
+            Original Array (myArray): [1, 2, 3, 4, 5]
+            Processed Array (result): [2, 4, 6, 8, 10]
+            You can modify the processArray function based on your specific needs for processing the elements within the array. The example provided is a simple demonstration.</p>
+    
+        <button class="button" onclick="processArray()">Process Array</button>
+        <button class="button" onclick="showCode11()">Show Code</button>
+        <button class="button" onclick="refreshPage11()">Refresh</button>
+    
+        <div id="arrayOutput" class="black"></div>
+        <pre id="codeDisplay11"></pre>
+    
+        <script>
+            var jsCode11 = "";
+    
+            function processArray() {
+                var arrayOutput = document.getElementById("arrayOutput");
+    
+                // Example array
+                var myArray = [1, 2, 3, 4, 5];
+                
+                // Process the array (You can modify this part based on your needs)
+                var result = myArray.map(function (element) {
+                    return element * 2; // Double each element
+                });
+    
+                // Display the processed array
+                arrayOutput.textContent = "Processed Array: " + result;
+    
+                // Store the current code in case it needs to be undone
+                jsCode11 = processArray.toString();
+            }
+    
+            function showCode11() {
+                var codeDisplay = document.getElementById("codeDisplay");
+                codeDisplay11.textContent = jsCode11;
+            }
+    
+            function refreshPage11() {
+                // Clear the array output and hide the code display
+                document.getElementById("arrayOutput").textContent = "";
+                var codeDisplay11 = document.getElementById("codeDisplay11");
+                codeDisplay11.textContent = "";
+            }
+        </script>
+        <a href="http://tpcg.io/_49DW3H" target="_blank">
+            <button class="button" >TRY IT YOURSELF</button></a>
+      
+       </div>
+       <h2>If-Else:</h2>
+       <p>he if-else statement in JavaScript is used for decision-making. It allows you to execute different blocks of code based on whether a given condition is true or false. </p>
+       <div class="brown" id="black">
+        <h2>If-else</h2>
+        <h3>Grading System</h3>
+<p>The provided JavaScript code implements a simple grading system based on the input marks. The criteria for assigning grades are as follows:
+<ol>
+    <li> If the entered marks are 90 or above, the grade is 'A'.</li> 
+    <li>If the marks are between 80 and 89 (inclusive), the grade is 'B'.</li>
+    <li>For marks between 70 and 79 (inclusive), the grade is 'C'.</li>
+    <li>If the marks range from 60 to 69 (inclusive), the grade is 'D'.</li>
+    <li>Any marks below 60 result in a grade 'F'.</li>
+</ol>
+    The code takes an input from the user representing their marks, calculates the corresponding grade based on the criteria mentioned above, and displays the result. The user can trigger this evaluation by clicking the "Evaluate Grade" button.
+    
+    Additionally, the code includes functionality for displaying the JavaScript code itself using the "Show Code" button. This allows users to inspect the underlying logic of the grading system. The "Refresh" button resets the page, clearing the input, output, and code display areas.
+    
+    It's a simple example illustrating the use of conditional statements in JavaScript to determine grades based on input marks.
+    </p>
+        <!-- Input field for entering marks -->
+        Enter your marks: <input type="number" id="marksInput">
+    
+        <!-- Buttons for actions: Evaluate Grade, Show Code, and Refresh -->
+        <button class="button" onclick="calculateGrade()">Evaluate Grade</button>
+        <button class="button" onclick="displayCode()">Show Code</button>
+        <button class="button" onclick="resetPage()">Refresh</button>
+    
+        <!-- Display area for the evaluated grade -->
+        <p id="gradeResult"></p>
+    
+        <!-- Code display area -->
+        <pre id="codeDisplay9"></pre>
+    
+        <!-- JavaScript code for grading system -->
+        <script>
+            // Initialize the variable to store the code
+            var codeDisplay9 = document.getElementById("codeDisplay9");
+            var jsCode9 = ""; // Placeholder value
+    
+            // Function to calculate the grade based on marks
+            function calculateGrade() {
+                // Get input and output elements
+                var marksInput = document.getElementById("marksInput");
+                var gradeResult = document.getElementById("gradeResult");
+    
+                // Parse marks input to an integer
+                var marks = parseInt(marksInput.value);
+    
+                // Check if the input is a valid number
+                if (isNaN(marks)) {
+                    alert("Please enter a valid number for marks.");
+                    return;
+                }
+    
+                // Variable to store the calculated grade
+                var grade;
+    
+                // Evaluate the grade based on marks
+                if (marks >= 90) {
+                    grade = "A";
+                } else if (marks >= 80) {
+                    grade = "B";
+                } else if (marks >= 70) {
+                    grade = "C";
+                } else if (marks >= 60) {
+                    grade = "D";
+                } else {
+                    grade = "F";
+                }
+    
+                // Display the calculated grade
+                gradeResult.textContent = "Your grade is: " + grade;
+    
+                // Store the current code for the show code button
+                jsCode9 = calculateGrade.toString();
+            }
+    
+            // Function to display the JavaScript code
+            function displayCode() {
+                // Display the stored code
+                codeDisplay9.textContent = jsCode9;
+            }
+    
+            // Function to reset the page
+            function resetPage() {
+                // Reset the input, clear the output, and hide the code display
+                document.getElementById("marksInput").value = "";
+                document.getElementById("gradeResult").textContent = "";
+                codeDisplay9.textContent = "";
+            }
+        </script>
+        <a href="http://tpcg.io/_49DW3H" target="_blank">
+            <button class="button" >TRY IT YOURSELF</button></a>
+      
+       </div>
+       <h2>switch:</h2>
+       <p>The switch statement in JavaScript provides a way to perform different actions based on the value of a variable or expression. It is an alternative to a series of if-else if-else statements when you want to compare a single value to multiple possible values.</p>
+       <div class="brown" id="doo">
+<h2>Switches</h2>
+        <h3>Grading System</h3>
+
+    <label for="marksInput1">Enter your marks: </label>
+    <input type="number" id="marksInput1">
+    <button class="button" onclick="calculateGrade1()">Evaluate Grade</button>
+    <button class="button" onclick="displayCode3()">Show Code</button>
+    <button class="button" onclick="refreshPage7()">Refresh</button>
+
+    <p id="gradeResult3"></p>
+
+    <pre id="codeDisplay3"></pre>
+
+    <script>
+        var jsCode = ""; // Placeholder value
+
+        function calculateGrade1() {
+            // Get input and output elements
+            var marksInput1 = document.getElementById("marksInput1");
+            var gradeResult3 = document.getElementById("gradeResult3");
+
+            // Parse marks input to an integer
+            var marks = parseInt(marksInput1.value);
+
+            // Check if the input is a valid number
+            if (isNaN(marks)) {
+                alert("Please enter a valid number for marks.");
+                return;
+            }
+
+            // Variable to store the calculated grade
+            var grade;
+
+            // Evaluate the grade based on marks using a switch statement
+            switch (true) {
+                case marks >= 90:
+                    grade = 'A';
+                    break;
+                case marks >= 80:
+                    grade = 'B';
+                    break;
+                case marks >= 70:
+                    grade = 'C';
+                    break;
+                case marks >= 60:
+                    grade = 'D';
+                    break;
+                default:
+                    grade = 'F';
+            }
+
+            // Display the calculated grade
+            gradeResult3.textContent = 'Your grade is: ' + grade;
+
+            // Store the current code for the show code button
+            jsCode7 = calculateGrade1.toString();
+        }
+
+        function displayCode3() {
+            // Display the stored code
+            document.getElementById("codeDisplay3").textContent = jsCode7;
+        }
+
+        function refreshPage7() {
+            // Reset the input, clear the output, and hide the code display
+            document.getElementById("marksInput1").value = "";
+            document.getElementById("gradeResult3").textContent = "";
+            document.getElementById("codeDisplay3").textContent = "";
+        }
+    </script>
+    <a href="http://tpcg.io/_49DW3H" target="_blank">
+        <button class="button" >TRY IT YOURSELF</button></a>
+       </div>
+      </div>
+    </main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    
+    <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+<div class="containers">
+    <div class="brown">
+        
+    </div>
+</div>
+
+
+</body>
+</html>
